@@ -6,4 +6,5 @@ tags={
 }
 name="ScalarMapModButtons"
 picture="thumbnail.png"
-supported_version="1.18.*"
+supported_version="1.18.2"
+remote_file_id="3627891270"
