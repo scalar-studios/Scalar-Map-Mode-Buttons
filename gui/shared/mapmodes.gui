@@ -579,13 +579,13 @@
 
 			}
 
-					flowcontainer = {
-						ignoreinvisible = yes
-						parentanchor = hcenter
-						direction = horizontal
-						spacing = -2
-						direction = horizontal
-						spacing = -2
+			flowcontainer = {
+				ignoreinvisible = yes
+				parentanchor = hcenter
+				direction = horizontal
+				spacing = -2
+				direction = horizontal
+				spacing = -2
 
 				icon_button_mapmode = {
 					name = "map_mode_landless_rulers_button"
@@ -609,8 +609,8 @@
 					}
 				}
 
-                			icon_button_mapmode = {
-                				name = "county_fertility"
+                icon_button_mapmode = {
+                	name = "county_fertility"
 					parentanchor = vcenter
 					size = { 32 32 }
 					visible = "[HasDlcFeature( 'khans_of_the_steppe' )]"
@@ -836,8 +836,6 @@
 				parentanchor = hcenter
 				direction = horizontal
 				spacing = -2
-                
-				/* Removed duplicate religion and cultures buttons here (they exist in main menu). */
 				
 				icon_button_mapmode = {
 					name = "map_mode_government_button"
