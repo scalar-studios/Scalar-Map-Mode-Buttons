@@ -579,12 +579,30 @@
 
 			}
 
-			flowcontainer = {
-				ignoreinvisible = yes
-				parentanchor = hcenter
-
 				icon_button_mapmode = {
-					name = "county_fertility"
+					name = "map_mode_landless_rulers_button"
+					visible = "[And( HasDlcFeature( 'landless_playable' ), CanChangeMapMode )]"
+					parentanchor = vcenter
+					size = { 32 32 }
+
+					blockoverride "mm_datacontext"
+					{
+						datacontext = "[GetMapMode( 'landless_rulers' )]"
+					}
+
+					blockoverride "mm_icon"
+					{
+						size = { 20 20 }
+					}
+
+					blockoverride "mm_button"
+					{
+						shortcut = "map_mode_18"
+					}
+				}
+
+                			icon_button_mapmode = {
+                				name = "county_fertility"
 					parentanchor = vcenter
 					size = { 32 32 }
 					visible = "[HasDlcFeature( 'khans_of_the_steppe' )]"
@@ -602,6 +620,27 @@
 					blockoverride "mm_button"
 					{
 						shortcut = "map_mode_19"
+					}
+				}
+
+				icon_button_mapmode = {
+					name = "county_control"
+					parentanchor = vcenter
+					size = { 32 32 }
+
+					blockoverride "mm_datacontext"
+					{
+						datacontext = "[GetMapMode( 'county_control' )]"
+					}
+
+					blockoverride "mm_icon"
+					{
+						size = { 20 20 }
+					}
+
+					blockoverride "mm_button"
+					{
+						/* no shortcut assigned to avoid conflicts */
 					}
 				}
 
@@ -786,47 +825,7 @@
 				ignoreinvisible = yes
 				parentanchor = hcenter
 				
-				icon_button_mapmode = {
-					name = "map_mode_religion_button"
-					size = { 32 32 }
-					parentanchor = vcenter
-
-					blockoverride "mm_datacontext"
-					{
-						datacontext = "[GetMapMode('religions')]"
-					}
-
-					blockoverride "mm_icon"
-					{
-						size = { 20 20 }
-					}
-
-					blockoverride "mm_button"
-					{
-						shortcut = "map_mode_3"
-					}
-				}
-
-				icon_button_mapmode = {
-					name = "map_mode_cultures_button"
-					size = { 32 32 }
-					parentanchor = vcenter
-
-					blockoverride "mm_datacontext"
-					{
-						datacontext = "[GetMapMode('cultures')]"
-					}
-
-					blockoverride "mm_icon"
-					{
-						size = { 20 20 }
-					}
-
-					blockoverride "mm_button"
-					{
-						shortcut = "map_mode_2"
-					}
-				}
+				/* Removed duplicate religion and cultures buttons here (they exist in main menu). */
 				
 				icon_button_mapmode = {
 					name = "map_mode_government_button"
@@ -871,8 +870,50 @@
 					}
 				}
 
-				icon_button_mapmode = {
-					name = "diplomatic_relations"
+					icon_button_mapmode = {
+						name = "county_development"
+						parentanchor = vcenter
+						size = { 32 32 }
+
+						blockoverride "mm_datacontext"
+						{
+							datacontext = "[GetMapMode( 'county_development' )]"
+						}
+
+						blockoverride "mm_icon"
+						{
+							size = { 20 20 }
+						}
+
+						blockoverride "mm_button"
+						{
+							shortcut = "map_mode_13"
+						}
+					}
+
+					icon_button_mapmode = {
+						name = "economy_buildings"
+						parentanchor = vcenter
+						size = { 32 32 }
+
+						blockoverride "mm_datacontext"
+						{
+							datacontext = "[GetMapMode( 'economy_buildings' )]"
+						}
+
+						blockoverride "mm_icon"
+						{
+							size = { 20 20 }
+						}
+
+						blockoverride "mm_button"
+						{
+							shortcut = "map_mode_14"
+						}
+					}
+
+					icon_button_mapmode = {
+						name = "diplomatic_relations"
 					parentanchor = vcenter
 					size = { 32 32 }
 
